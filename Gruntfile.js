@@ -80,6 +80,15 @@ module.exports = function (grunt) {
           debug: true,
           server: path.resolve('server/express')
         }
+      },
+      test: {
+        options: {
+          port: 9000,
+          bases: [ path.resolve('.tmp'), path.resolve(yeomanConfig.app) ],
+          monitor: {},
+          debug: true,
+          server: path.resolve('server/express')
+        }
       }
     },
     // regarde: {
@@ -304,6 +313,14 @@ module.exports = function (grunt) {
     'express:livereload',
     'open',
     'watch'
+  ]);
+
+  grunt.registerTask('express-test', [
+    'clean:server',
+    'coffee',
+    'compass',
+    'connect:test',
+    'testacular'
   ]);
 
 };

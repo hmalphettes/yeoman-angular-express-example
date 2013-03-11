@@ -41,3 +41,6 @@ Add to package.json
 
 Add grunt by doing something along those lines:
 https://github.com/blai/grunt-express-example
+
+# Step 3: Push to Cloudfoundry
+
