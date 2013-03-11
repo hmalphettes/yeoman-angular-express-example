@@ -1,5 +1,14 @@
+// this is the entry point to run the built application in production.
+'use strict';
 var server = require('./server/express');
 
-// server.app.listen(3000, function() {
-//   console.log('server listening on ' + 3000);
-// });
+var options = {
+  port: process.env.VCAP_APP_PORT || 3000,
+  hostname: process.env.VCAP_APP_HOST,
+};
+
+server.use(server.express.static(__dirname + '/dist'));
+
+server.listen(options.port, options.hostname, function() {
+  console.log('Web server started on ' + options.hostname + ':' + options.port + ' using the built app in "dist"');
+});

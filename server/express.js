@@ -12,9 +12,12 @@ io.sockets.on('connection', function (socket) {
   });
 });
 
-// use livereload middleware
-app.use(require('grunt-contrib-livereload/lib/utils').livereloadSnippet);
-
+try {
+  // use livereload middleware
+  app.use(require('grunt-contrib-livereload/lib/utils').livereloadSnippet);
+} catch(ex) {
+  //no such thing in production
+}
 app.get('/hello', function(req, res){
   // res.send('hello!');
   res.send('bonjour!');
@@ -25,3 +28,5 @@ exports = module.exports = server;
 exports.use = function() {
   app.use.apply(app, arguments);
 };
+
+exports.express = express;

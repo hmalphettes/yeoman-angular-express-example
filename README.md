@@ -1,13 +1,30 @@
 Angular Webapp Scaffolded by Yeoman
 
-Yeoman: the doc looks but it is a beta:
+# Tour the stack
+This might be the stack you are looking for:
+- angularjs
+- twitter-bootstrap
+- nodejs express with socket.io
+- testacular
+- Deploys on cloudfoundry
+
+# Setup and Development
+Tests: `grunt express-test`
+Run in dev mode: `grunt express-server`
+Run in production mode: `grunt build && node app`
+
+# How was this project generated?
+I am glad you ask: with yeoman.
+Yeoman: the doc is fantastic but it is a beta:
 "Expect nothing to works."
 
-Here is what worked today: March 11th 2013 around noon.
+Here is what worked today: March 11th 2013 around noon Singapore time.
 
-# Scaffolding recipe:
+## Setting up yeoman:
 - Install the latest yeoman with the audit script: `curl -L get.yeoman.io | bash` (https://github.com/yeoman/yeoman/wiki/Manual-Install)
 - Install everything the audit script tells you.
+
+## Scaffolding angular with twitter-bootstrap
 - Make a package.json file: `npm init`.
 - Add the latest generators for angular and testacular:
 ```
@@ -22,7 +39,7 @@ Now continue with the Getting-Started Documentatin of Yeoman:
 yo angular --minsafe
 ```
 Opt out of RequireJS: at the time of this writing that would break testacular.
-Opt in of everything else.
+Opt in of everything else. Including Twitter-Bootstrap's SaaS flavor.
 
 Ok ready to test run all this:
 ```
@@ -35,12 +52,19 @@ Now run the testacular tests.
 grunt test
 ```
 
-# Step 2: Scaffold express
-Add to package.json
-`"grunt-express": "git://github.com/blai/grunt-express.git"`
+## Step 2: Scaffold express
+Yeoman will serve the files with a naive static setup of nodejs's express.
+We want express instead. Luckily other people got started in that direction (Thanks https://github.com/blai/grunt-express).
+
+Add to package.json my fork of that project.
+`"grunt-express": "git://github.com/hmalphettes/grunt-express.git"`
 
 Add grunt by doing something along those lines:
 https://github.com/blai/grunt-express-example
 
-# Step 3: Push to Cloudfoundry
+The fork is to take care of one detail:
+https://github.com/blai/grunt-express/pull/2
 
+## Step 3: Push to Cloudfoundry
+TODO: add a manifest.yml template and a grunt task.
+For now: `vmc push`
