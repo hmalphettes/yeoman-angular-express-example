@@ -62,13 +62,10 @@ Yeoman will serve the files with a naive static setup of nodejs's express.
 We want express instead. Luckily other people got started in that direction (Thanks https://github.com/blai/grunt-express).
 
 Add to package.json my fork of that project.
-`"grunt-express": "git://github.com/hmalphettes/grunt-express.git"`
+`"grunt-express": "git://github.com/blai/grunt-express.git"`
 
 Add grunt by doing something along those lines:
 https://github.com/blai/grunt-express-example
-
-The fork is to take care of one detail:
-https://github.com/blai/grunt-express/pull/2
 
 ## Step 3: Push to Cloudfoundry
 TODO: add a manifest.yml template and a grunt task.
