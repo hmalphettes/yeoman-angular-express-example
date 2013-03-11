@@ -1,4 +1,4 @@
-Angular Webapp Scaffolded by Yeoman
+Angular Webapp Scaffolded by Yeoman [![Build Status](https://secure.travis-ci.org/hmalphettes/yeoman-angular-express-example.png?branch=master)](http://travis-ci.org/hmalphettes/yeoman-angular-express-example)
 
 # Tour the stack
 This might be the stack you are looking for:
@@ -19,7 +19,7 @@ I am glad you ask: with yeoman.
 
 Yeoman, the doc is fantastic but it is a beta:
 
-    "Expect nothing to works."
+    "Expect nothing to work."
 
 Here is what worked today: March 11th 2013 around noon Singapore time.
 
@@ -50,7 +50,7 @@ Ok ready to test run all this:
 ```
 grunt server
 ```
-Should open the browser on port 3000
+Will open the browser on port 9000
 
 Now run the testacular tests.
 ```
