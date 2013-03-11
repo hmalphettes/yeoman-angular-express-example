@@ -6,19 +6,24 @@ This might be the stack you are looking for:
 - twitter-bootstrap
 - nodejs express with socket.io
 - testacular
-- Deploys on cloudfoundry
+
+It deploys on cloudfoundry.
 
 # Setup and Development
-Tests: `grunt express-test`
-Run in dev mode: `grunt express-server`
-Run in production mode: `grunt build && node app`
+- Tests: `grunt express-test`
+- Run in dev mode: `grunt express-server`
+- Run in production mode: `grunt build && node app`
 
 # How was this project generated?
 I am glad you ask: with yeoman.
-Yeoman: the doc is fantastic but it is a beta:
-"Expect nothing to works."
+
+Yeoman, the doc is fantastic but it is a beta:
+
+    "Expect nothing to works."
 
 Here is what worked today: March 11th 2013 around noon Singapore time.
+
+Note: one can take the project as a seed and get going.
 
 ## Setting up yeoman:
 - Install the latest yeoman with the audit script: `curl -L get.yeoman.io | bash` (https://github.com/yeoman/yeoman/wiki/Manual-Install)
