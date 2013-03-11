@@ -3,6 +3,7 @@ var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
+var path = require('path');
 
 module.exports = function (grunt) {
   // load all grunt tasks
@@ -70,6 +71,27 @@ module.exports = function (grunt) {
         }
       }
     },
+    express: {
+      livereload: {
+        options: {
+          port: 9000,
+          bases: [ path.resolve('.tmp'), path.resolve(yeomanConfig.app) ],
+          monitor: {},
+          debug: true,
+          server: path.resolve('server/express')
+        }
+      }
+    },
+    // regarde: {
+    //   pub: {
+    //     files: 'public/**/*',
+    //     tasks: ['livereload']
+    //   },
+    //   trigger: {
+    //     files: '.server', // touch this file to restart the express server, just an example
+    //     tasks: 'express-restart:livereload'
+    //   }
+    // },
     open: {
       server: {
         url: 'http://localhost:<%= connect.livereload.options.port %>'
@@ -273,4 +295,15 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', ['build']);
+
+  grunt.registerTask('express-server', [
+    'clean:server',
+    'coffee:dist',
+    'compass:server',
+    'livereload-start',
+    'express:livereload',
+    'open',
+    'watch'
+  ]);
+
 };

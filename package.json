@@ -25,7 +25,9 @@
     "grunt-google-cdn": "~0.1.0",
     "grunt-ngmin": "~0.0.1",
     "generator-angular": "git://github.com/yeoman/generator-angular.git",
-    "generator-testacular": "*"
+    "generator-testacular": "*",
+    "grunt-express": "git://github.com/hmalphettes/grunt-express.git",
+    "socket-io": "*"
   },
   "engines": {
     "node": ">=0.8.0"
