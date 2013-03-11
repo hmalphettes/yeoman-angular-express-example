@@ -18,7 +18,7 @@ try {
 } catch(ex) {
   //no such thing in production
 }
-app.get('/hello', function(req, res){
+app.get('/hello', function(req, res) {
   // res.send('hello!');
   res.send('bonjour!');
 });

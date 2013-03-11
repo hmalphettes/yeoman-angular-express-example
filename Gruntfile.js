@@ -118,7 +118,8 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js'
+        '<%= yeoman.app %>/scripts/{,*/}*.js',
+        '<%= yeoman.server %>/{,*/}*.js'
       ]
     },
     testacular: {
@@ -324,5 +325,7 @@ module.exports = function (grunt) {
     'connect:test',
     'testacular'
   ]);
+
+  grunt.registerTask('travis', ['jshint', 'test']);
 
 };

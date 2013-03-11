@@ -1,6 +1,9 @@
 {
-  "name": "yo-provisioning2",
+  "name": "yeoman-angular-express",
   "version": "0.0.0",
+  "scripts": {
+    "test": "grunt travis --verbose"
+  }
   "dependencies": {},
   "devDependencies": {
     "grunt": "0.4.0rc7",
